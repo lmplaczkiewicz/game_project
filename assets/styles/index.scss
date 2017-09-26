@@ -1,2 +1,37 @@
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'color';
+@import 'typography';
+@import 'theme';
+
+$height: 150px;
+$width: 150px;
+$min-width: 450px;
+$min-height: 150px;
+$margin-left: 0 auto;
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 450px;
+  min-height: $min-height;
+  min-width: $min-width;
+}
+
+.col-xs-4 {
+  height: $height;
+  min-height: $min-height;
+  width: $width;
+}
+
+.col-md-4 {
+  height: $height;
+  min-height: $min-height;
+  width: $width;
+}
+
+.box {
+  border: 1px solid $white;
+}
