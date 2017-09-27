@@ -30,7 +30,6 @@ convert()
 
 const turn = function () {
   if (playerOne === 1) {
-    startBoard.push(event.target)
     event.target.innerText = 'X'
     playerOne = 0
     checkWin()
@@ -38,7 +37,6 @@ const turn = function () {
     checkTie()
   } else {
     event.target.innerText = 'O'
-    startBoard.push(event.target)
     playerOne = 1
     checkWin()
     emptySquares -= 1
