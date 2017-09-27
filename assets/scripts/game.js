@@ -16,16 +16,15 @@ const winCombos = [
 ]
 
 const cell = document.querySelectorAll('.col-xs-4')
+console.log('This is cell', cell)
+console.log('This is cell.id', cell.id)
 
 const test = function () {
-  console.log('For the love of ')
+  $('.col-xs-4').on('click', function (event) {
+    console.log('this is the click')
+    event.preventDefault()
+  })
 }
-
-console.log(cell)
-console.log(startBoard)
-console.log(playerOne)
-console.log(playerTwo)
-console.log(winCombos)
 
 module.exports = {
   cell,
