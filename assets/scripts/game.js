@@ -20,7 +20,7 @@ console.log('This is cell', cell)
 console.log('This is cell.id', cell.id)
 
 const test = function () {
-  $('.col-xs-4').on('click', function (event) {
+  $('.col-xs-4').one('click', function (event) {
     console.log('this is the click')
     event.preventDefault()
   })
