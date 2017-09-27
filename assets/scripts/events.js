@@ -17,17 +17,36 @@ const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
   api.signIn(data)
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .then(ui.signInSuccess)
+    .catch(ui.signInFailure)
+}
+
+const onSignOut = function (event) {
+  event.preventDefault()
+  api.signOut()
+    .then(ui.signOutSuccess)
+    .catch(ui.signOutFailure)
+}
+
+const onPasswordChange = function (event) {
+  const data = getFormFields(this)
+  event.preventDefault()
+  api.passwordChange(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
 }
 
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
+  $('#sign-out').on('submit', onSignOut)
+  $('#change-password').on('submit', onPasswordChange)
 }
 
 module.exports = {
   addHandlers,
   onSignUp,
-  onSignIn
+  onSignIn,
+  onSignOut,
+  onPasswordChange
 }
