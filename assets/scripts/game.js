@@ -17,27 +17,45 @@ const winCombos = [
 ]
 
 const cell = document.querySelectorAll('.col-xs-4')
-console.log('This is cell', cell)
-console.log('This is cell.id', cell.id)
+const board = []
 
-const target = function () {
+const convert = function () {
+  for (let i = 0; i < cell.length; i++) {
+    board.push(i)
+  }
+  console.log(board)
+}
+
+convert()
+
+const turn = function () {
+  if (playerOne === 1) {
+    startBoard.push(event.target)
+    event.target.innerText = 'X'
+    playerOne = 0
+    checkWin()
+    emptySquares -= 1
+    checkTie()
+  } else {
+    event.target.innerText = 'O'
+    startBoard.push(event.target)
+    playerOne = 1
+    checkWin()
+    emptySquares -= 1
+    checkTie()
+  }
+}
+
+const start = function () {
+  console.log(startBoard)
   $('.col-xs-4').one('click', function (event) {
     event.preventDefault()
     event.target.innerText = playerOne
-    if (playerOne === 1) {
-      event.target.innerText = 'X'
-      playerOne = 0
-      emptySquares -= 1
-      checkTie()
-    } else {
-      event.target.innerText = 'O'
-      playerOne = 1
-      emptySquares -= 1
-      checkTie()
-    }
+    turn()
   })
 }
-
+// If last square is selected will throw Tie Game even if last square rresults
+// win
 function checkTie () {
   if (emptySquares === 0) {
     for (let i = 0; i < cell.length; i++) {
@@ -49,11 +67,18 @@ function checkTie () {
   return false
 }
 
+function checkWin (startBoard, player) {
+  console.log('check for win')
+}
+
 module.exports = {
   cell,
   startBoard,
   playerTwo,
   playerOne,
   winCombos,
-  target
+  start,
+  turn,
+  checkTie,
+  convert
 }

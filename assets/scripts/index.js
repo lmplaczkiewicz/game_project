@@ -11,7 +11,7 @@ $(() => {
 
 $(() => {
   events.addHandlers()
-  game.target()
+  game.start()
 })
 
 // use require with a reference to bundle the file and use it in this file
