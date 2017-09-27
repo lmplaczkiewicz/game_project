@@ -1,6 +1,7 @@
 'use strict'
 
 let startBoard = []
+let activePlayer = ''
 const playerOne = 'O'
 const playerTwo = 'X'
 const winCombos = [
@@ -16,6 +17,10 @@ const winCombos = [
 
 const cell = document.querySelectorAll('.col-xs-4')
 
+const test = function () {
+  console.log('For the love of ')
+}
+
 console.log(cell)
 console.log(startBoard)
 console.log(playerOne)
@@ -27,5 +32,6 @@ module.exports = {
   startBoard,
   playerTwo,
   playerOne,
-  winCombos
+  winCombos,
+  test
 }

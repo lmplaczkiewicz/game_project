@@ -10,8 +10,7 @@ $(() => {
 })
 
 $(() => {
-  $('.col-xs-4').on('click', events.test)
-  $('#test').on('click', events.test)
+  events.addHandlers()
 })
 
 // use require with a reference to bundle the file and use it in this file
