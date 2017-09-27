@@ -49,12 +49,7 @@ nav {
   height: $height;
   min-height: $min-height;
   width: $width;
-}
-
-.col-md-4 {
-  height: $height;
-  min-height: $min-height;
-  width: $width;
+  border: 1px solid $white;
 }
 
 .box {
