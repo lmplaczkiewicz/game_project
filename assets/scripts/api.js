@@ -1,9 +1,9 @@
 'use strict'
+
 const store = require('./store')
 const config = require('./config')
 
 const signUp = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
@@ -11,6 +11,16 @@ const signUp = function (data) {
   })
 }
 
+const signIn = function (data) {
+  console.log(data)
+  return $.ajax({
+    url: config.apiOrigin + '/sign-in',
+    method: 'POST',
+    data: data
+  })
+}
+
 module.exports = {
-  signUp
+  signUp,
+  signIn
 }

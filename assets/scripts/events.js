@@ -7,7 +7,6 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
-  console.log(getFormFields(this))
   event.preventDefault()
   api.signUp(data)
     .then(ui.signUpSuccess)
@@ -17,8 +16,9 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log('We made it')
-  console.log(data)
+  api.signIn(data)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
 }
 
 const addHandlers = function () {
@@ -28,5 +28,6 @@ const addHandlers = function () {
 
 module.exports = {
   addHandlers,
-  onSignUp
+  onSignUp,
+  onSignIn
 }
