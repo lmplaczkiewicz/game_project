@@ -7,12 +7,15 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
+  console.log(getFormFields(this))
   event.preventDefault()
-  console.log('Did we make it?')
+  api.signUp(data)
+    .then(ui.signUpSuccess)
+    .catch(ui.signUpFailure)
 }
 
 const addHandlers = function () {
-  $('#credential').on('submit', onSignUp)
+  $('#sign-up').on('submit', onSignUp)
 }
 
 module.exports = {

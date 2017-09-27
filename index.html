@@ -14,7 +14,7 @@
         <body class="container-fluid">
 
           <header class="mainPageHeader">
-            <h1 id="test">Tic Tac Toe</h1>
+            <h1>Tic Tac Toe</h1>
           </header>
 
           <nav class="col-md-12">
@@ -26,7 +26,7 @@
     </div>
 
       <!-- Modal -->
-      <form class="credentialEntry" id="credential">
+      <form class="credentialEntry" id="sign-up">
       <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -38,15 +38,15 @@
             </div>
             <div class="modal-body">
               <h3 class="modalAccountHeader">Email</h3>
-              <input type="text" name="account[email]" id="email" placeholder="Enter Email">
+              <input type="text" name="credentials[email]" id="email" placeholder="Enter Email">
               <h3 class="modalAccountHeader">Password</h3>
-              <input type="text" name="account[password]" id="password" placeholder="Enter Password">
+              <input type="text" name="credentials[password]" id="password" placeholder="Enter Password">
               <h3 class="modalAccountHeader">Confirm Password</h3>
-              <input type="text" name="account[passwordConfirm]" id="passwordConfirm" placeholder="Confirm Password">
+              <input type="text" name="credentials[password_confirmation]" id="passwordConfirm" placeholder="Confirm Password">
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" id="sign-up">Create Account</button>
+              <button type="submit" class="btn btn-primary" id="signUpButton">Create Account</button>
             </div>
           </div>
         </div>
