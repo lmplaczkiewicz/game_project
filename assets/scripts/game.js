@@ -1,6 +1,7 @@
 'use strict'
 
 let startBoard = []
+let emptySquares = 9
 let activePlayer = ''
 let playerOne = 'X'
 let playerTwo = 'O'
@@ -26,11 +27,26 @@ const target = function () {
     if (playerOne === 1) {
       event.target.innerText = 'X'
       playerOne = 0
+      emptySquares -= 1
+      checkTie()
     } else {
       event.target.innerText = 'O'
       playerOne = 1
+      emptySquares -= 1
+      checkTie()
     }
   })
+}
+
+function checkTie () {
+  if (emptySquares === 0) {
+    for (let i = 0; i < cell.length; i++) {
+      cell[i].style.backgroundColor = 'green'
+    }
+    $('#result').text('Tie Game')
+    return true
+  }
+  return false
 }
 
 module.exports = {
