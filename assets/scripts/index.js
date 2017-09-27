@@ -10,7 +10,7 @@ $(() => {
 })
 
 $(() => {
-  $('#container').on('click', events.test)
+  $('.col-xs-4').on('click', events.test)
   $('#test').on('click', events.test)
 })
 
