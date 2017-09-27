@@ -21,6 +21,8 @@ console.log('This is cell.id', cell.id)
 
 const test = function () {
   $('.col-xs-4').one('click', function (event) {
+    event.target.innerText = playerOne
+    console.log(playerOne)
     console.log('this is the click')
     event.preventDefault()
   })
