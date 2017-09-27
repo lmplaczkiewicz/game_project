@@ -10,7 +10,8 @@ $(() => {
 })
 
 $(() => {
-  events.addHandlers()
+  $('#container').on('click', events.test)
+  $('#test').on('click', events.test)
 })
 
 // use require with a reference to bundle the file and use it in this file

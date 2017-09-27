@@ -14,7 +14,7 @@
         <body class="container-fluid">
 
           <header class="mainPageHeader">
-            <h1>Tic Tac Toe</h1>
+            <h1 id="test">Tic Tac Toe</h1>
           </header>
 
           <nav class="col-md-12">
@@ -95,7 +95,7 @@
           </nav>
 
           <main>
-          <div class="container">
+          <form class="container" id="container">
 
             <div class="row">
               <div class="col-xs-4 col-md-4 box" id="0"></div>
@@ -114,8 +114,13 @@
               <div class="col-xs-4 col-md-4 box" id="7"></div>
               <div class="col-xs-4 col-md-4 box" id="8"></div>
             </div>
-          </div>
+          </form>
         </main>
+
+        <div class="gameEnd">
+          <div class="gameEndText"></div>
+        </div>
+        <button class="interfaceButton" id="replayGame">Replay</button>
 
         </body>
       </html>

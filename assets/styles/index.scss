@@ -17,6 +17,14 @@ nav {
   background-color: #4D4DFF;
 }
 
+.container {
+  min-height: 450px;
+  min-width: 450px;
+  max-width: 450px;
+  max-height: 450px;
+  padding: 0;
+}
+
 .button {
   float: left;
 }

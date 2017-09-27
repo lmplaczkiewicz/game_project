@@ -23,6 +23,7 @@ console.log(playerTwo)
 console.log(winCombos)
 
 module.exports = {
+  cell,
   startBoard,
   playerTwo,
   playerOne,
