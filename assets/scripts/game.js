@@ -17,6 +17,10 @@ const createBoard = function (id) {
   }
 }
 
+const endClick = function () {
+  $('.col-xs-4').off('click')
+}
+
 const emptySquareTotal = function () {
   emptySquares -= 1
   if (emptySquares === 0) {
@@ -28,34 +32,34 @@ const emptySquareTotal = function () {
 
 const showTie = function () {
   $('#result').text('Tie Game')
-  $('.col-xs-4').off('click')
+  endClick()
   return true
 }
 
 const checkWin = function (player) {
   if ($('#0').hasClass(player) && $('#1').hasClass(player) && $('#2').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#3').hasClass(player) && $('#4').hasClass(player) && $('#5').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#6').hasClass(player) && $('#7').hasClass(player) && $('#8').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#0').hasClass(player) && $('#3').hasClass(player) && $('#6').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#1').hasClass(player) && $('#4').hasClass(player) && $('#7').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#2').hasClass(player) && $('#5').hasClass(player) && $('#8').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#0').hasClass(player) && $('#4').hasClass(player) && $('#8').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else if ($('#2').hasClass(player) && $('#4').hasClass(player) && $('#6').hasClass(player)) {
-    $('.col-xs-4').off('click')
+    endClick()
     return true
   } else {
     emptySquareTotal()
