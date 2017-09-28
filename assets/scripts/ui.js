@@ -50,6 +50,16 @@ const postGameFailure = function (error) {
   console.log('postGame failure ui')
 }
 
+const patchGameSuccess = function (data) {
+  console.log(data)
+  console.log('patchGame Success ui')
+}
+
+const patchGameFailure = function (error) {
+  console.log(error)
+  console.log('patchGame failure ui')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -60,5 +70,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   postGameSuccess,
-  postGameFailure
+  postGameFailure,
+  patchGameSuccess,
+  patchGameFailure
 }
