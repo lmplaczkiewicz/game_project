@@ -8,13 +8,45 @@ $min-width: 450px;
 $min-height: 150px;
 $margin-left: 0 auto;
 
+h1 {
+  font-family: fantasy, sans-serif;
+  text-align: center;
+}
+
 body {
   background-color: $background-color;
   color: $font-color;
 }
 
+main {
+  margin-top: 50px;
+  min-width: $min-width;
+  height: 500px;
+}
+
 nav {
   background-color: #4D4DFF;
+  max-width: 50%;
+  margin: auto 25%;
+}
+
+aside {
+  border: 1px solid $white;
+  width: $width;
+  height: $height * 2;
+  float: left;
+  position: fixed;
+  margin-top: 100px;
+}
+
+footer {
+  background-color: #4D4DFF;
+  max-width: 25%;
+  margin: auto 37.5%;
+}
+
+.gameEnd {
+  margin-top: 25px;
 }
 
 .container {
@@ -41,11 +73,23 @@ nav {
   min-width: $min-width;
 }
 
+.topRow {
+  margin-top: 50px;
+}
+
 .col-md-1 {
   float: left;
 }
 
 .col-xs-4 {
+  height: $height;
+  min-height: $min-height;
+  width: $width;
+  border: 1px solid $white;
+  position: relative;
+}
+
+.col-xs-2 {
   height: $height;
   min-height: $min-height;
   width: $width;

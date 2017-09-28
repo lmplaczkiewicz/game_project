@@ -134,14 +134,19 @@
       </form>
           </nav>
 
+          <aside class='accountInfo' id='accountInfoId'>
+            <div class='col-xs-2' id='accountName'></div>
+            <div class='col-xs-2' id='gameComplete'></div>
+          </aside>
+
           <main>
             <h1 class="result" id="result"></h1>
           <form class="container" id="container">
 
             <div class="row">
-              <div class="col-xs-4" id="0"></div>
-              <div class="col-xs-4" id="1"></div>
-              <div class="col-xs-4" id="2"></div>
+              <div class="col-xs-4 topRow" id="0"></div>
+              <div class="col-xs-4 topRow" id="1"></div>
+              <div class="col-xs-4 topRow" id="2"></div>
             </div>
 
             <div class="row">
@@ -158,10 +163,12 @@
           </form>
         </main>
 
+        <footer class='bottomDisplay' id='bottomDisplayId'>
         <div class="gameEnd">
           <div class="gameEndText"></div>
-          <button class="interfaceButton" id="replayGame">Replay</button>
+          <button class="interfaceReplayButton" id="replayGame">Replay</button>
         </div>
+        </footer>
 
         </body>
       </html>
