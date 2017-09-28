@@ -6,7 +6,7 @@ const api = require('./api')
 const ui = require('./ui')
 const store = require('./store')
 
-const getStats = function (index) {
+const getStats = function () {
   event.preventDefault()
   const playerId = store.user.id
   api.show(playerId)
@@ -64,6 +64,7 @@ const onReplayStart = function (event) {
   api.postGame()
     .then(ui.postGameSuccess)
     .catch(ui.postGameFailure)
+  getStats()
 }
 
 const addHandlers = function () {

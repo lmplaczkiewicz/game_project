@@ -5,7 +5,7 @@ const api = require('./api')
 const events = require('./events')
 
 const signUpSuccess = function (data) {
-  console.log(data)
+  console.log('this is singUp data', data)
 }
 
 const signUpFailure = function (error) {
