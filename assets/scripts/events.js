@@ -4,6 +4,15 @@ const game = require('./game')
 const getFormFields = require('../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('./store')
+
+const getStats = function (index) {
+  event.preventDefault()
+  const playerId = store.user.id
+  api.show(playerId)
+    .then(ui.statsSuccess)
+    .catch(ui.statsFailure)
+}
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
@@ -44,11 +53,13 @@ const onGameStart = function (event) {
     .then(ui.postGameSuccess)
     .catch(ui.postGameFailure)
   $('#start-game').hide()
+  getStats()
 }
 
 const onReplayStart = function (event) {
   console.log('Made it to onReplayStart in events')
   game.onReplay(event)
+  getStats()
   event.preventDefault()
   api.postGame()
     .then(ui.postGameSuccess)
@@ -71,5 +82,6 @@ module.exports = {
   onSignOut,
   onPasswordChange,
   onGameStart,
-  onReplayStart
+  onReplayStart,
+  getStats
 }

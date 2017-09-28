@@ -2,6 +2,7 @@
 
 const store = require('./store')
 const api = require('./api')
+const events = require('./events')
 
 const signUpSuccess = function (data) {
   console.log(data)
@@ -60,6 +61,23 @@ const patchGameFailure = function (error) {
   console.log('patchGame failure ui')
 }
 
+const statsSuccess = function (data) {
+  let count = 0
+  console.log('this is statsSuccess')
+  console.log(data)
+  for (let i = 0; i < data.games.length; i++) {
+    if (data.games[i].over === true) {
+      count += 1
+    }
+  }
+  console.log(count)
+}
+
+const statsFailure = function (error) {
+  console.log(error)
+  console.log('this is statsFailure')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -72,5 +90,7 @@ module.exports = {
   postGameSuccess,
   postGameFailure,
   patchGameSuccess,
-  patchGameFailure
+  patchGameFailure,
+  statsSuccess,
+  statsFailure
 }
