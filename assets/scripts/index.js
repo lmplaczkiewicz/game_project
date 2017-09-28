@@ -9,8 +9,17 @@ $(() => {
   setAPIOrigin(location, config)
 })
 
+const overlayOn = function on () {
+  document.getElementById('overlayId').style.display = 'block';
+}
+
+const overlayOff = function off () {
+  document.getElementById('overlayId').style.display = 'none';
+}
+
 $(() => {
   events.addHandlers()
+  overlayOn()
 })
 
 // use require with a reference to bundle the file and use it in this file

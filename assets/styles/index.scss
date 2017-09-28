@@ -9,7 +9,6 @@ $min-height: 150px;
 $margin-left: 0 auto;
 
 h1 {
-  font-family: fantasy, sans-serif;
   text-align: center;
 }
 
@@ -43,6 +42,31 @@ footer {
   background-color: #4D4DFF;
   max-width: 25%;
   margin: auto 37.5%;
+}
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  color: rgba(21,171,195,1.0);
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  text-shadow: 0 0 5px rgba(21,171,195,0.7);
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.credentialEntry {
+  z-index: 4;
+}
+
+.underlay {
+  z-index: 1;
 }
 
 .gameEnd {
