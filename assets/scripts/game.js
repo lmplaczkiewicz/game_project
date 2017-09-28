@@ -1,19 +1,17 @@
 'use strict'
 
 const event = require('./events')
+const api = require('./api')
 
 let player = 0
 let board = ['', '', '', '', '', '', '', '', '']
 let emptySquares = 9
 
 const createBoard = function (id) {
-  console.log(id)
   if (player === 0) {
     board[id] = 'X'
-    console.log(board)
   } else {
     board[id] = 'O'
-    console.log(board)
   }
 }
 
@@ -94,10 +92,9 @@ const checkSquare = function (squareSelected) {
 
 const addHandlers = function () {
   $('.col-xs-4').on('click', function (event) {
+    console.log(board)
     let squareSelected = $(this)
     createBoard(this.id)
-    console.log('this is the id', this.id)
-    console.log(squareSelected.id)
     checkSquare(squareSelected)
   })
 }
@@ -118,5 +115,7 @@ module.exports = {
   checkWin,
   emptySquareTotal,
   showTie,
-  onReplay
+  onReplay,
+  createBoard,
+  endClick
 }
