@@ -42,7 +42,7 @@ const changePasswordFailure = function (error) {
 const postGameSuccess = function (data) {
   console.log(data)
   console.log('postGame Success ui')
-  store.game = data.user
+  store.game = data.game
 }
 
 const postGameFailure = function (error) {

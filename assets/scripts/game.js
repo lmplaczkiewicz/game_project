@@ -1,6 +1,6 @@
 'use strict'
 
-const event = require('./events')
+const events = require('./events')
 const api = require('./api')
 
 let player = 0

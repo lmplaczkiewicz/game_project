@@ -46,13 +46,22 @@ const onGameStart = function (event) {
   $('#start-game').hide()
 }
 
+const onReplayStart = function (event) {
+  console.log('Made it to onReplayStart in events')
+  game.onReplay(event)
+  event.preventDefault()
+  api.postGame()
+    .then(ui.postGameSuccess)
+    .catch(ui.postGameFailure)
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)
   $('#change-password').on('submit', onPasswordChange)
-  $('#replayGame').on('click', game.onReplay)
-  $('#start-game').one('submit', onGameStart)
+  $('#replayGame').on('click', onReplayStart)
+  $('#start-game').on('submit', onGameStart)
 }
 
 module.exports = {
@@ -61,5 +70,6 @@ module.exports = {
   onSignIn,
   onSignOut,
   onPasswordChange,
-  onGameStart
+  onGameStart,
+  onReplayStart
 }
