@@ -1,7 +1,21 @@
 'use strict'
 
+const event = require('./events')
+
 let player = 0
+let board = ['', '', '', '', '', '', '', '', '']
 let emptySquares = 9
+
+const createBoard = function (id) {
+  console.log(id)
+  if (player === 0) {
+    board[id] = 'X'
+    console.log(board)
+  } else {
+    board[id] = 'O'
+    console.log(board)
+  }
+}
 
 const emptySquareTotal = function () {
   emptySquares -= 1
@@ -68,10 +82,19 @@ const checkSquare = function (squareSelected) {
 const addHandlers = function () {
   $('.col-xs-4').on('click', function (event) {
     let squareSelected = $(this)
+    createBoard(this.id)
     console.log('this is the id', this.id)
     console.log(squareSelected.id)
     checkSquare(squareSelected)
   })
+}
+
+const onReplay = function (event) {
+  $('.col-xs-4').removeClass('pOne')
+  $('.col-xs-4').removeClass('pTwo')
+  $('.col-xs-4').empty()
+  $('#result').empty()
+  emptySquares = 9
 }
 
 module.exports = {
@@ -80,5 +103,6 @@ module.exports = {
   cellInput,
   checkWin,
   emptySquareTotal,
-  showTie
+  showTie,
+  onReplay
 }
