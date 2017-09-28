@@ -1,6 +1,21 @@
 'use strict'
 
 let player = 0
+let emptySquares = 9
+
+const emptySquareTotal = function () {
+  emptySquares -= 1
+  if (emptySquares === 0) {
+    showTie()
+  } else {
+    return false
+  }
+}
+
+const showTie = function () {
+  $('#result').text('Tie Game')
+  return true
+}
 
 const checkWin = function (player) {
   if ($('#0').hasClass(player) && $('#1').hasClass(player) && $('#2').hasClass(player)) {
@@ -20,7 +35,7 @@ const checkWin = function (player) {
   } else if ($('#2').hasClass(player) && $('#4').hasClass(player) && $('#6').hasClass(player)) {
     return true
   } else {
-    return false
+    emptySquareTotal()
   }
 }
 
@@ -53,12 +68,17 @@ const checkSquare = function (squareSelected) {
 const addHandlers = function () {
   $('.col-xs-4').on('click', function (event) {
     let squareSelected = $(this)
-    console.log(squareSelected)
+    console.log('this is the id', this.id)
+    console.log(squareSelected.id)
     checkSquare(squareSelected)
   })
 }
 
 module.exports = {
   addHandlers,
-  checkSquare
+  checkSquare,
+  cellInput,
+  checkWin,
+  emptySquareTotal,
+  showTie
 }
