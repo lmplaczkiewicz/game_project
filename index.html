@@ -64,19 +64,16 @@
           <div class="modal-content">
             <div class="modal-header">
               <h3 class="modal-title" id="exampleModalLabel">Change Password</h3>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
             </div>
             <div class="modal-body">
               <h3 class="modalAccountHeader">Old Password</h3>
-              <input type="text" name="passwords[old]" id="passwordOld" placeholder="Enter Old Password">
+              <input class='fillbox' type="password" name="passwords[old]" id="passwordOld" placeholder="Enter Old Password">
               <h3 class="modalAccountHeader">New Password</h3>
-              <input type="text" name="passwords[new]" id="passwordNew" placeholder="Enter New Password">
+              <input class='fillbox' type="password" name="passwords[new]" id="passwordNew" placeholder="Enter New Password">
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary" id="changePasswordButton">Change Password</button>
+              <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn-danger modalConfirmButton" id="changePasswordButton">Change Password</button>
             </div>
           </div>
         </div>
@@ -99,21 +96,18 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title" id="exampleModalLabel">Account Sign Up</h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
                 <div class="modal-body">
                   <h3 class="modalAccountHeader">Email</h3>
-                  <input type="text" name="credentials[email]" id="email" placeholder="Enter Email">
+                  <input class='fillbox' type="text" name="credentials[email]" id="email" placeholder="Enter Email">
                   <h3 class="modalAccountHeader">Password</h3>
-                  <input type="text" name="credentials[password]" id="password" placeholder="Enter Password">
+                  <input class='fillbox' type="password" name="credentials[password]" id="password" placeholder="Enter Password">
                   <h3 class="modalAccountHeader">Confirm Password</h3>
-                  <input type="text" name="credentials[password_confirmation]" id="passwordConfirm" placeholder="Confirm Password">
+                  <input class='fillbox' type="password" name="credentials[password_confirmation]" id="passwordConfirm" placeholder="Confirm Password">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" id="signUpButton">Create Account</button>
+                  <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn-danger modalConfirmButton" id="signUpButton">Create Account</button>
                 </div>
               </div>
             </div>
@@ -127,19 +121,16 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title" id="exampleModalLabel">Sign In</h3>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
                 </div>
                 <div class="modal-body">
                   <h3 class="modalAccountHeader">Email</h3>
-                  <input type="text" name="credentials[email]" id="emailSignIn" placeholder="Enter Email">
+                  <input class='fillbox' type="text" name="credentials[email]" id="emailSignIn" placeholder="Enter Email">
                   <h3 class="modalAccountHeader">Password</h3>
-                  <input type="text" name="credentials[password]" id="passwordSignIn" placeholder="Enter Password">
+                  <input class='fillbox' type="password" name="credentials[password]" id="passwordSignIn" placeholder="Enter Password">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary" id="signInButton">Sign In</button>
+                  <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn-danger modalConfirmButton" id="signInButton">Sign In</button>
                 </div>
               </div>
             </div>

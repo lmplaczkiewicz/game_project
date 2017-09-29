@@ -22,140 +22,221 @@ main {
 
 nav {
   background-color: #4D4DFF;
-  max-width: 50%;
   margin: auto 25%;
+  max-width: 50%;
 }
 
 aside {
   border: 1px solid $white;
-  width: $width;
-  height: $height * 2;
   float: left;
-  position: fixed;
+  height: $height * 2;
   margin-top: 100px;
+  position: fixed;
+  width: $width;
 }
 
 footer {
   background-color: #4D4DFF;
-  max-width: 25%;
   margin: auto 37.5%;
+  max-width: 25%;
 }
 
 .overlay {
-  position: fixed; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100%; /* Full width (cover the whole page) */
-  min-width: 995px;
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: black;
+  bottom: 0;
   color: rgba(21,171,195,1.0);
-  font-family: "Bitstream Vera Sans Mono", monospace;
-  text-shadow: 0 0 5px rgba(21,171,195,0.7);
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  display: none;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  height: 100%;
+  left: 0;
+  min-width: 995px;
+  position: fixed;
+  right: 0;
+  text-shadow: 0 0 5px rgba(21, 171, 195, 0.7);
+  top: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .titleHead {
   font-size: 72px;
-  margin-top: 25px;
   margin-bottom: 25px;
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .overlayText {
   align-content: center;
-  position: relative;
-  width: 60%;
+  background-color: #24c6e0;
+  border-radius: 10px;
+  border: 1px solid #24c618;
+  box-shadow: 0 0 10px #24c6e0;
+  color: black;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  font-weight: bold;
   height: 50px;
   margin: auto;
-  text-align: center;
-  font-weight: bold;
   padding: 0;
-  border: 1px solid #24c618;
-  font-family: "Bitstream Vera Sans Mono", monospace;
-  border-radius: 10px;
-  background-color: #24c6e0;
-  color: black;
-  box-shadow: 0 0 10px #24c6e0;
+  position: relative;
+  text-align: center;
   top: 20px;
+  width: 60%;
 }
 
 .mainPageHeader {
-  margin: 10px 20% 10px 20%;
-  width: 60%;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  border: 1px solid rgba(36,198,24,1.0);
-  font-family: "Bitstream Vera Sans Mono", monospace;
+  background-color: rgba(36, 198, 224, 1);
   border-radius: 25px;
-  background-color: rgba(36,198,224,1.0);
+  border: 1px solid rgba(36, 198, 24, 1);
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
   color: black;
-  box-shadow: 0 0 10px rgba(36,198,224,1.0);
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  font-weight: bold;
+  margin: 10px 20% 10px 20%;
+  padding: 10px;
+  text-align: center;
+  width: 60%;
 }
 
 .overlayHead {
-  width: 60%;
-  margin: 0 auto;
-  line-height: 1.1;
   font-size: 40px;
+  line-height: 1.1;
+  margin: 0 auto;
+  width: 60%;
+  font-weight: bold;
 }
 
 .overlaySignButton {
+  background-color: rgba(36, 198, 224, 1);
+  border: 1px solid rgba(36, 198, 24, 1);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
+  color: black;
+  cursor: crosshair;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
   font-size: 48px;
-  position: relative;
+  font-weight: bold;
+  height: 50%;
   left: 25%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  text-align: center;
   top: 35px;
   width: 50%;
-  height: 50%;
-  margin: auto;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  border: 1px solid rgba(36,198,24,1.0);
-  font-family: "Bitstream Vera Sans Mono", monospace;
-  border-radius: 25px;
-  background-color: rgba(36,198,224,1.0);
-  color: black;
-  box-shadow: 0 0 10px rgba(36,198,224,1.0);
-  cursor: crosshair;
 }
 
 .overlaySignInButton {
-  font-size: 48px;
-  position: relative;
-  left: 25%;
-  width: 50%;
-  height: 50%;
-  margin: auto;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  border: 1px solid rgba(36,198,24,1.0);
-  font-family: "Bitstream Vera Sans Mono", monospace;
+  background-color: rgba(36, 198, 224, 1);
+  border: 1px solid rgba(36, 198, 24, 1);
   border-radius: 25px;
-  background-color: rgba(36,198,224,1.0);
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
   color: black;
-  box-shadow: 0 0 10px rgba(36,198,224,1.0);
+  cursor: crosshair;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  font-size: 48px;
+  font-weight: bold;
+  height: 50%;
+  left: 25%;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+
+.modalConfirmButton {
+  background-color: rgba(36, 198, 224, 1);
+  border: 1px solid rgba(36, 198, 24, 1);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
+  color: black;
+}
+
+.modalCloseButton {
+  background-color: rgba(36, 198, 224, 1);
+  border: 1px solid rgba(36, 198, 24, 1);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
+  color: black;
 }
 
 .signBox {
-  display: block;
-  width: 50%;
-  margin: 25px auto 25px auto;
-  height: 200px;
   align-content: center;
   border-radius: 25px;
+  display: block;
+  height: 200px;
+  margin: 25px auto;
+  width: 50%;
 }
 
 .overlayButton {
+  color: rgba(21, 171, 195, 1);
   display: block;
-  width: 300px;
   height: 100px;
-  color: rgba(21,171,195,1.0);
-  text-shadow: 0 0 5px rgba(21,171,195,0.7);
+  text-shadow: 0 0 5px rgba(21, 171, 195, 0.7);
+  width: 300px;
+}
+
+.modal-header {
+  align-content: center;
+  background-color: #24c6e0;
+  border-radius: 10px;
+  border: 1px solid #24c618;
+  box-shadow: 0 0 10px #24c6e0;
+  color: black;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  font-weight: bold;
+  height: 50px;
+  margin: auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  top: 20px;
+  width: 60%;
+}
+
+.modal-content {
+    background-clip: padding-box;
+    background-color: black;
+    border-radius: 6px;
+    border: 1px solid #999;
+    border: 1px solid rgba(36, 198, 224, 1);
+    box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+    outline: 0;
+    position: relative;
+  }
+
+.modalAccountHeader {
+  align-content: center;
+  background-color: #24c6e0;
+  border-radius: 10px;
+  border: 1px solid #24c618;
+  box-shadow: 0 0 10px #24c6e0;
+  color: black;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  font-weight: bold;
+  height: 30px;
+  margin: 25px auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 60%;
+}
+
+.fillbox {
+  background-clip: padding-box;
+  background-color: black;
+  border-radius: 6px;
+  border: 1px solid rgba(36, 198, 224, 1);
+  box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+  margin: auto 210px;
+  outline: 0;
+  position: relative;
+  text-align: center;
+}
+
+.modal-body {
+  margin-top: 25px;
 }
 
 .credentialEntry {
@@ -171,13 +252,13 @@ footer {
 }
 
 .theGameBox {
-  min-height: 450px;
-  min-width: 450px;
-  max-width: 450px;
-  max-height: 450px;
-  padding: 0;
   clear: both;
   margin-top: 100px;
+  max-height: 450px;
+  max-width: 450px;
+  min-height: 450px;
+  min-width: 450px;
+  padding: 0;
 }
 
 .button {
@@ -200,18 +281,18 @@ footer {
 }
 
 .col-xs-4 {
+  border: 1px solid $white;
   height: $height;
   min-height: $min-height;
-  width: $width;
-  border: 1px solid $white;
   position: relative;
+  width: $width;
 }
 
 .col-xs-2 {
+  border: 1px solid $white;
   height: $height;
   min-height: $min-height;
   width: $width;
-  border: 1px solid $white;
 }
 
 .box {
