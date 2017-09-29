@@ -12,6 +12,7 @@ const overlayOn = function on () {
 
 const signUpSuccess = function (data) {
   console.log('this is singUp data', data)
+  $('#signUpModal').modal('hide')
 }
 
 const signUpFailure = function (error) {
@@ -22,6 +23,7 @@ const signInSuccess = function (data) {
   console.log(data)
   $('.col-xs-4').off()
   $('#start-game').show()
+  $('#signInModal').modal('hide')
   store.user = data.user
   overlayOff()
 
@@ -47,6 +49,7 @@ const signOutFailure = function (error) {
 
 const changePasswordSuccess = function (data) {
   console.log('Success')
+  $('#changePasswordModal').modal('hide')
 }
 
 const changePasswordFailure = function (error) {
