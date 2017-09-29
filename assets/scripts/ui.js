@@ -1,15 +1,13 @@
 'use strict'
 
 const store = require('./store')
-const api = require('./api')
-const events = require('./events')
 
 const overlayOff = function off () {
   document.getElementById('overlayId').style.display = 'none'
 }
 
 const overlayOn = function on () {
-  document.getElementById('overlayId').style.display = 'block';
+  document.getElementById('overlayId').style.display = 'block'
 }
 
 const signUpSuccess = function (data) {
@@ -22,8 +20,11 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (data) {
   console.log(data)
+  $('.col-xs-4').off()
+  $('#start-game').show()
   store.user = data.user
   overlayOff()
+
   console.log('This is data.user ', data.user)
   console.log('This is store.user ', store.user)
 }
@@ -34,6 +35,8 @@ const signInFailure = function (error) {
 
 const signOutSuccess = function (data) {
   console.log('Success logged out')
+  $('.col-xs-4').off()
+  $('#start-game').show()
   store.user = null
   overlayOn()
 }
@@ -81,6 +84,7 @@ const statsSuccess = function (data) {
     }
   }
   console.log(count)
+  count = 0
 }
 
 const statsFailure = function (error) {

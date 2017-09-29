@@ -34,6 +34,7 @@ const onSignOut = function (event) {
   event.preventDefault()
   api.signOut()
     .then(ui.signOutSuccess)
+    .then(game.onReplay)
     .catch(ui.signOutFailure)
 }
 
@@ -48,6 +49,7 @@ const onPasswordChange = function (event) {
 const onGameStart = function (event) {
   console.log('Made it to onGameStart in events')
   event.preventDefault()
+  $('.col-xs-4').unbind('click')
   game.addHandlers()
   api.postGame()
     .then(ui.postGameSuccess)

@@ -112,6 +112,8 @@ const addHandlers = function () {
     let cellIndex = this.id
     let cellValue = board[this.id]
     let gameOver = over
+    console.log('idx:', cellIndex)
+    console.log('cellValue:', cellValue)
     let data = {'game': {
       'cell': {
         'index': cellIndex,
@@ -131,6 +133,9 @@ const onReplay = function (event) {
   $('.col-xs-4').removeClass('pTwo')
   $('.col-xs-4').empty()
   $('#result').empty()
+  board.length = []
+  player = 0
+  $('.col-xs-4').unbind('click')
   addHandlers()
   emptySquares = 9
 }
