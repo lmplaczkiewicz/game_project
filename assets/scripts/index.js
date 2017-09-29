@@ -4,22 +4,15 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const events = require('./events')
 const game = require('./game')
+const ui = require('./ui')
 
 $(() => {
   setAPIOrigin(location, config)
 })
 
-const overlayOn = function on () {
-  document.getElementById('overlayId').style.display = 'block';
-}
-
-const overlayOff = function off () {
-  document.getElementById('overlayId').style.display = 'none';
-}
-
 $(() => {
   events.addHandlers()
-  overlayOn()
+  ui.overlayOn()
 })
 
 // use require with a reference to bundle the file and use it in this file

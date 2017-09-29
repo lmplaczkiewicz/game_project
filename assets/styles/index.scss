@@ -9,8 +9,21 @@ $min-height: 150px;
 $margin-left: 0 auto;
 
 h1 {
+  margin: auto 0 0 0;
+  font-size: 1.7em;
   text-align: center;
-  font-size: 50px;
+  font-weight: bold;
+  padding: .5em;
+  border: 1px solid rgba(36,198,24,1.0);
+  margin-bottom: 1ex;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background-color: rgba(36,198,224,1.0);
+  color: black;
+  -moz-box-shadow: 0 0 10px rgba(36,198,224,1.0);
+  -webkit-box-shadow: 0 0 10px rgba(36,198,224,1.0);
+  box-shadow: 0 0 10px rgba(36,198,224,1.0);
 }
 
 body {
@@ -62,6 +75,17 @@ footer {
   cursor: pointer; /* Add a pointer on hover */
 }
 
+.overlayText {
+  display: block;
+  width: 100%;
+  height: 34%;
+}
+
+.signBox {
+  width: 100%;
+  height: 33%;
+}
+
 .buttonBox {
   border: 4px solid rgba(21,171,195,1.0);
   width: 50%;
@@ -90,21 +114,18 @@ footer {
   margin-top: 25px;
 }
 
-.container {
+.theGameBox {
   min-height: 450px;
   min-width: 450px;
   max-width: 450px;
   max-height: 450px;
   padding: 0;
+  clear: both;
+  margin-top: 100px;
 }
 
 .button {
   float: left;
-}
-
-.container {
-  clear: both;
-  margin-top: 100px;
 }
 
 .row {

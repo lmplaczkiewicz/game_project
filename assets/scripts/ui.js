@@ -4,6 +4,14 @@ const store = require('./store')
 const api = require('./api')
 const events = require('./events')
 
+const overlayOff = function off () {
+  document.getElementById('overlayId').style.display = 'none'
+}
+
+const overlayOn = function on () {
+  document.getElementById('overlayId').style.display = 'block';
+}
+
 const signUpSuccess = function (data) {
   console.log('this is singUp data', data)
 }
@@ -15,6 +23,7 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   console.log(data)
   store.user = data.user
+  overlayOff()
   console.log('This is data.user ', data.user)
   console.log('This is store.user ', store.user)
 }
@@ -26,6 +35,7 @@ const signInFailure = function (error) {
 const signOutSuccess = function (data) {
   console.log('Success logged out')
   store.user = null
+  overlayOn()
 }
 
 const signOutFailure = function (error) {
@@ -92,5 +102,6 @@ module.exports = {
   patchGameSuccess,
   patchGameFailure,
   statsSuccess,
-  statsFailure
+  statsFailure,
+  overlayOn
 }
