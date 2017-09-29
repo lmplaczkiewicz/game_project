@@ -23,18 +23,18 @@
         <div class="container buttonBox">
 
           <div class="container overlayText">
-            <h1 class="container overlayHead">GREETINGS USER</h1>
+            <h1 class="overlayHead" id="overlayAlert">GREETINGS USER</h1>
           </div>
 
         <div class='container signBox'>
             <button type="button" class="btn-danger overlaySignButton" data-toggle="modal" data-target="#signUpModal">
-              SIGN UP
+              CREATE PROFILE
             </button>
         </div>
 
           <div class='container signBox'>
               <button type="button" class="btn-danger overlaySignInButton" data-toggle="modal" data-target="#signInModal">
-                SIGN IN
+                ACCESS PROFILE
               </button>
           </div>
         </div>
@@ -95,7 +95,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="exampleModalLabel">ACCOUNT SIGN UP</h3>
+                  <h3 class="modal-title" id="signUpModalLabel">PROFILE CREATION</h3>
                 </div>
                 <div class="modal-body">
                   <h3 class="modalAccountHeader">Email</h3>
@@ -120,7 +120,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h3 class="modal-title" id="exampleModalLabel">SIGN IN</h3>
+                  <h3 class="modal-title" id="exampleModalLabel">ACCESS PROFILE</h3>
                 </div>
                 <div class="modal-body">
                   <h3 class="modalAccountHeader">Email</h3>
@@ -130,7 +130,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn-danger modalConfirmButton" id="signInButton">Sign In</button>
+                  <button type="submit" class="btn-danger modalConfirmButton" id="signInButton">Access Profile</button>
                 </div>
               </div>
             </div>

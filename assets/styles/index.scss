@@ -68,13 +68,13 @@ footer {
 .overlayText {
   align-content: center;
   background-color: #24c6e0;
-  border-radius: 10px;
+  border-radius: 25px;
   border: 1px solid #24c618;
   box-shadow: 0 0 10px #24c6e0;
   color: black;
   font-family: 'Bitstream Vera Sans Mono', monospace;
   font-weight: bold;
-  height: 50px;
+  height: 100px;
   margin: auto;
   padding: 0;
   position: relative;
@@ -99,9 +99,7 @@ footer {
 
 .overlayHead {
   font-size: 40px;
-  line-height: 1.1;
-  margin: 0 auto;
-  width: 60%;
+  margin: 10px;
   font-weight: bold;
 }
 
@@ -116,13 +114,13 @@ footer {
   font-size: 48px;
   font-weight: bold;
   height: 50%;
-  left: 25%;
+  left: 10%;
   margin: auto;
   padding: 10px;
   position: relative;
   text-align: center;
   top: 35px;
-  width: 50%;
+  width: 80%;
 }
 
 .overlaySignInButton {
@@ -136,12 +134,12 @@ footer {
   font-size: 48px;
   font-weight: bold;
   height: 50%;
-  left: 25%;
+  left: 10%;
   margin: auto;
   padding: 10px;
   position: relative;
   text-align: center;
-  width: 50%;
+  width: 80%;
 }
 
 .modalConfirmButton {
@@ -194,6 +192,7 @@ footer {
   top: 20px;
   width: 60%;
 }
+
 .modal-title {
   margin: auto;
   font-size: 33px;

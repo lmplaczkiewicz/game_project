@@ -13,10 +13,14 @@ const overlayOn = function on () {
 const signUpSuccess = function (data) {
   console.log('this is singUp data', data)
   $('#signUpModal').modal('hide')
+  $('#overlayAlert').text('USER PROFILE CREATED - ACCESS PROFILE BELOW')
+  $('#signUpModalLabel').text('PROFILE CREATION')
 }
 
 const signUpFailure = function (error) {
   console.error(error)
+  $('#signUpModalLabel').css('color', 'red')
+  $('#signUpModalLabel').text('CREATION FAILED')
 }
 
 const signInSuccess = function (data) {
