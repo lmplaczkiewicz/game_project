@@ -37,6 +37,8 @@ const signInSuccess = function (data) {
 
 const signInFailure = function (error) {
   console.log(error)
+  $('#signInModalLabel').css('color', 'red')
+  $('#signInModalLabel').text('ACCESS FAILED')
 }
 
 const signOutSuccess = function (data) {
