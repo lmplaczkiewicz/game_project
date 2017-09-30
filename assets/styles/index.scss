@@ -11,8 +11,8 @@ $margin-left: 0 auto;
 body {
   background-color: black;
   color: $font-color;
-  min-width: 1200px;
   max-width: 1200px;
+  min-width: 1200px;
 }
 
 main {
@@ -28,11 +28,17 @@ nav {
 
 aside {
   border: 1px solid $white;
-  float: left;
   height: $height * 2;
-  margin-top: 100px;
-  position: fixed;
+  margin: 15% auto;
   width: $width;
+}
+
+.accountInfo {
+  float: left;
+}
+
+.playButtons {
+  float: right;
 }
 
 footer {
@@ -201,20 +207,20 @@ footer {
 }
 
 .modal-content {
-    background-clip: padding-box;
-    background-color: black;
-    border-radius: 6px;
-    border: 1px solid rgba(36, 198, 224, 1);
-    box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
-    outline: 0;
-    position: relative;
+  background-clip: padding-box;
+  background-color: black;
+  border: 1px solid rgba(36, 198, 224, 1);
+  border-radius: 6px;
+  box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+  outline: 0;
+  position: relative;
   }
 
 .modalAccountHeader {
   align-content: center;
   background-color: #24c6e0;
-  border-radius: 10px;
   border: 1px solid #24c618;
+  border-radius: 10px;
   box-shadow: 0 0 10px #24c6e0;
   color: black;
   font-family: 'Bitstream Vera Sans Mono', monospace;
@@ -230,8 +236,8 @@ footer {
 .fillbox {
   background-clip: padding-box;
   background-color: black;
-  border-radius: 6px;
   border: 1px solid rgba(36, 198, 224, 1);
+  border-radius: 6px;
   box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
   margin: auto 210px;
   outline: 0;
@@ -244,7 +250,7 @@ footer {
 }
 
 .credentialEntry {
-  z-index: 4;
+  z-index: 5;
 }
 
 .underlay {
@@ -270,22 +276,40 @@ footer {
 }
 
 .row {
-  margin: 0 auto;
   max-width: 450px;
   min-height: $min-height;
   min-width: $min-width;
-}
-
-.topRow {
-  margin-top: 50px;
 }
 
 .col-md-1 {
   float: left;
 }
 
+.statusMessage {
+  background-color: rgba(36, 198, 224, 1);
+  border: 1px solid rgba(36, 198, 24, 1);
+  border-radius: 25px;
+  box-shadow: 0 0 10px rgba(36, 198, 224, 1);
+  color: black;
+  cursor: crosshair;
+  font-family: 'Bitstream Vera Sans Mono', monospace;
+  height: 120px;
+  margin: auto;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  top: 25px;
+  width: 65%;
+}
+
+.result {
+  font-size: 48px;
+  font-weight: bold;
+}
+
 .col-xs-4 {
   border: 1px solid white;
+  bottom: 500px;
   color: black;
   font-size: 108px;
   font-weight: bold;
@@ -298,15 +322,15 @@ footer {
 }
 
 .pOne {
-  background-color: rgba(36, 198, 224, 1);
   border: 1px solid rgba(36, 198, 24, 1);
-  box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+  color: rgba(36, 198, 224, 1);
+  text-shadow: 0 3px 9px rgba(36, 198, 24, 1);
 }
 
 .pTwo {
-  background-color: rgba(255, 0, 0, 1);
   border: 1px solid rgba(36, 198, 24, 1);
-  box-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+  color: rgba(255, 0, 0, 1);
+  text-shadow: 0 3px 9px rgba(225, 10, 10, 1);
 }
 
 .col-xs-2 {
