@@ -43,16 +43,16 @@
           <nav class="col-md-12">
             <!-- Button trigger modal -->
 
-      <form class=signOut id="sign-out">
+      <form class='signOut' id="sign-out">
       <div class="button">
-        <button type="submit" class="btn-danger" data-toggle="" data-target="">
+        <button type="submit" class="topRowButton btn-danger" data-toggle="" data-target="">
           SIGN OUT
         </button>
       </div>
       </form>
 
       <div class="button" id="changePasswordAccessButton">
-      <button type="button" class="btn-danger" data-toggle="modal" data-target="#changePasswordModal">
+      <button type="button" class="topRowButton btn-danger" data-toggle="modal" data-target="#changePasswordModal">
         CHANGE PASSWORD
       </button>
       </div>
@@ -80,13 +80,26 @@
       </div>
       </form>
 
-      <form class=startButton id="start-game">
-      <div class="button">
-        <button type="submit" class="btn-danger" data-toggle="" data-target="">
-          START GAME
-        </button>
+      <div id='replayGame'>
+        <form class='replayButton' id="replay-game">
+        <div class="button">
+          <button type="submit" class="topRowButton btn-danger replayGameButton" data-toggle="" data-target="">
+            REPLAY
+          </button>
+        </div>
+        </form>
       </div>
-      </form>
+
+      <div id='playGameId'>
+        <form class='startButton' id="start-game">
+        <div class="button">
+          <button type="submit" class="topRowButton btn-danger startGameButton" data-toggle="" data-target="">
+            START
+          </button>
+        </div>
+        </form>
+      </div>
+
           </nav>
 
           <!-- Modal -->
@@ -139,13 +152,8 @@
 
 
           <aside class='accountInfo' id='accountInfoId'>
-            <div class='col-xs-2' id='accountName'></div>
+            <div class='col-xs-2' id='activeTurn'></div>
             <div class='col-xs-2' id='gameComplete'></div>
-          </aside>
-
-          <aside class='playButtons' id='playButtonId'>
-            <div class='col-xs-2' id='playGameId'></div>
-            <div class='col-xs-2' id='replayGame'></div>
           </aside>
 
           <main>
