@@ -17,6 +17,24 @@ const createBoard = function (id) {
   }
 }
 
+const resultAdmin = function (player) {
+  $('#result').text('PLAYER ' + player + ' HAS WON')
+}
+
+const pOneSymbol = function () {
+  $('#activeSymbolId').text('X')
+  $('#activeSymbolId').css('border', '1px solid rgba(36, 198, 24, 1)')
+  $('#activeSymbolId').css('color', 'rgba(36, 198, 224, 1)')
+  $('#activeSymbolId').css('text-shadow', '0 3px 9px rgba(36, 198, 24, 1)')
+}
+
+const pTwoSymbol = function () {
+  $('#activeSymbolId').text('O')
+  $('#activeSymbolId').css('border', '1px solid rgba(36, 198, 24, 1)')
+  $('#activeSymbolId').css('color', 'rgba(255, 0, 0, 1)')
+  $('#activeSymbolId').css('text-shadow', '0 3px 9px rgba(225, 10, 10, 1)')
+}
+
 const endClick = function () {
   $('.col-xs-4').off('click')
 }
@@ -83,6 +101,7 @@ const cellInput = function (squareSelected) {
       alert('Player One Wins')
     } else {
       player = 1
+      pTwoSymbol()
     }
   } else {
     squareSelected.addClass('pTwo').text('O')
@@ -90,6 +109,7 @@ const cellInput = function (squareSelected) {
       alert('Player Two Wins')
     } else {
       player = 0
+      pOneSymbol()
     }
   }
 }
@@ -138,6 +158,8 @@ const onReplay = function (event) {
   $('.col-xs-4').unbind('click')
   addHandlers()
   emptySquares = 9
+  $('#result').text('GAME GRID RELOADED')
+  pOneSymbol()
 }
 
 module.exports = {
@@ -149,5 +171,6 @@ module.exports = {
   showTie,
   onReplay,
   createBoard,
-  endClick
+  endClick,
+  pOneSymbol
 }

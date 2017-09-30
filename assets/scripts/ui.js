@@ -47,6 +47,7 @@ const signOutSuccess = function (data) {
   $('#start-game').show()
   store.user = null
   overlayOn()
+  $('#result').text('WELCOME TO THE GAME GRID')
 }
 
 const signOutFailure = function (error) {
@@ -56,10 +57,12 @@ const signOutFailure = function (error) {
 const changePasswordSuccess = function (data) {
   console.log('Success')
   $('#changePasswordModal').modal('hide')
+  $('#result').text('PASSWORD CHANGE SUCCESS')
 }
 
 const changePasswordFailure = function (error) {
   console.log(error)
+  $('#result').text('PASSWORD CHANGE FAILURE')
 }
 
 const postGameSuccess = function (data) {

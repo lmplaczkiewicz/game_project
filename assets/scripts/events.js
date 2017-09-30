@@ -56,6 +56,8 @@ const onGameStart = function (event) {
     .catch(ui.postGameFailure)
   $('#start-game').hide()
   getStats()
+  game.pOneSymbol()
+  $('#result').text('GAME GRID INITIALIZED')
 }
 
 const onReplayStart = function (event) {
