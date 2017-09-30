@@ -23,14 +23,12 @@ const resultAdmin = function (player) {
 
 const pOneSymbol = function () {
   $('#activeSymbolId').text('X')
-  $('#activeSymbolId').css('border', '1px solid rgba(36, 198, 24, 1)')
   $('#activeSymbolId').css('color', 'rgba(36, 198, 224, 1)')
   $('#activeSymbolId').css('text-shadow', '0 3px 9px rgba(36, 198, 24, 1)')
 }
 
 const pTwoSymbol = function () {
   $('#activeSymbolId').text('O')
-  $('#activeSymbolId').css('border', '1px solid rgba(36, 198, 24, 1)')
   $('#activeSymbolId').css('color', 'rgba(255, 0, 0, 1)')
   $('#activeSymbolId').css('text-shadow', '0 3px 9px rgba(225, 10, 10, 1)')
 }
@@ -98,7 +96,7 @@ const cellInput = function (squareSelected) {
   if (player === 0) {
     squareSelected.addClass('pOne').text('X')
     if (checkWin('pOne') === true) {
-      alert('Player One Wins')
+      $('#result').text('PLAYER ONE WINS')
     } else {
       player = 1
       pTwoSymbol()
@@ -106,7 +104,7 @@ const cellInput = function (squareSelected) {
   } else {
     squareSelected.addClass('pTwo').text('O')
     if (checkWin('pTwo') === true) {
-      alert('Player Two Wins')
+      $('#result').text('PLAYER TWO WINS')
     } else {
       player = 0
       pOneSymbol()

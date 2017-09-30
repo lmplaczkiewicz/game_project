@@ -28,6 +28,7 @@ const signInSuccess = function (data) {
   $('.col-xs-4').off()
   $('#start-game').show()
   $('#signInModal').modal('hide')
+  $('#activeSymbolId').empty()
   store.user = data.user
   overlayOff()
 
@@ -43,11 +44,11 @@ const signInFailure = function (error) {
 
 const signOutSuccess = function (data) {
   console.log('Success logged out')
+  $('#gamesCompleteId').empty()
   $('.col-xs-4').off()
   $('#start-game').show()
   store.user = null
   overlayOn()
-  $('#result').text('WELCOME TO THE GAME GRID')
 }
 
 const signOutFailure = function (error) {
@@ -62,7 +63,8 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function (error) {
   console.log(error)
-  $('#result').text('PASSWORD CHANGE FAILURE')
+  $('#exampleModalLabel').css('color', 'red')
+  $('#exampleModalLabel').text('CHANGE FAILURE')
 }
 
 const postGameSuccess = function (data) {
@@ -96,6 +98,7 @@ const statsSuccess = function (data) {
     }
   }
   console.log(count)
+  $('#gamesCompleteId').text(count)
   count = 0
 }
 

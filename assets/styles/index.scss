@@ -29,7 +29,6 @@ nav {
 }
 
 aside {
-  border: 1px solid $white;
   height: $height * 2;
   margin: 15% auto;
   width: $width;
@@ -387,6 +386,38 @@ footer {
   text-shadow: 0 3px 9px rgba(36, 198, 24, 1);
 }
 
+.gamesCompleteTitle {
+  display: block;
+  height: 25%;
+  font-size: 15px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow:: 0 0 10px rgba(21,171,195,0.5);
+  background-color: rgba(0,0,0,0.7);
+  border: 1px solid rgba(21,171,195,1.0);
+  color: rgba(21,171,195,1.0);
+  text-shadow: 1px solid rgba(21,171,195,1.0);
+}
+
+.gamesCompleteInput {
+  display: block;
+  font-size: 96px;
+  height: 75%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow:: 0 0 10px rgba(21,171,195,0.5);
+  background-color: rgba(0,0,0,0.7);
+  border: 1px solid rgba(21,171,195,1.0);
+  color: rgba(36, 198, 224, 1);
+  text-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+}
+
 .box {
   border: 1px solid $white;
+}
+
+.asideBox {
+  border: 1px solid rgba(21,171,195,1.0);
 }
