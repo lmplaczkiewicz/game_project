@@ -47,6 +47,9 @@ const signOutSuccess = function () {
   $('#gamesCompleteId').empty()
   $('.col-xs-4').off()
   $('#start-game').show()
+  $('#replayGame').hide()
+  $('#ai-game').show()
+  $('#replayAiGame').hide()
   store.user = null
   overlayOn()
 }

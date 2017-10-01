@@ -50,11 +50,14 @@ const onPasswordChange = function (event) {
 const onGameStart = function (event) {
   event.preventDefault()
   $('.col-xs-4').unbind('click')
-  game.addHandlers()
+  game.onReplay(event)
   api.postGame()
     .then(ui.postGameSuccess)
     .catch(ui.postGameFailure)
   $('#start-game').hide()
+  $('#replayGame').show()
+  $('#ai-game').show()
+  $('#replayAiGame').hide()
   getStats()
   game.pOneSymbol()
   $('#result').text('GAME GRID INITIALIZED')
@@ -70,6 +73,32 @@ const onReplayStart = function (event) {
   getStats()
 }
 
+const onAiGameStart = function (event) {
+  event.preventDefault()
+  $('.col-xs-4').unbind('click')
+  game.onAiReplay(event)
+  api.postGame()
+    .then(ui.postGameSuccess)
+    .catch(ui.postGameFailure)
+  $('#ai-game').hide()
+  $('#replayAiGame').show()
+  $('#start-game').show()
+  $('#replayGame').hide()
+  getStats()
+  game.pOneSymbol()
+  $('#result').text('MASTER CONTROL LOADED')
+}
+
+const onAiReplayStart = function (event) {
+  game.onAiReplay(event)
+  getStats()
+  event.preventDefault()
+  api.postGame()
+    .then(ui.postGameSuccess)
+    .catch(ui.postGameFailure)
+  getStats()
+}
+
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -77,6 +106,8 @@ const addHandlers = function () {
   $('#change-password').on('submit', onPasswordChange)
   $('#replayGame').on('click', onReplayStart)
   $('#start-game').on('submit', onGameStart)
+  $('#ai-game').on('click', onAiGameStart)
+  $('#replayAiGame').on('click', onAiReplayStart)
 }
 
 module.exports = {
@@ -87,5 +118,7 @@ module.exports = {
   onPasswordChange,
   onGameStart,
   onReplayStart,
-  getStats
+  getStats,
+  onAiGameStart,
+  onAiReplayStart
 }

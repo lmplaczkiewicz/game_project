@@ -12,6 +12,8 @@ $(() => {
 $(() => {
   events.addHandlers()
   ui.overlayOn()
+  $('#replayGame').hide()
+  $('#replayAiGame').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file
