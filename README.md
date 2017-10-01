@@ -1,61 +1,29 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+https://lmplaczkiewicz.github.io/game_project/
 
-# browser-template
+Technologies Used:
+HTML5
+SCSS
+Bootstrap
+WDI-Boston Front End Web Development Modules
+Javascript
+SPA
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+Planning/Process
+-I began planning for this project mentally before putting my thoughts down onto a wireframe. As I started to get an idea of how my website may look at production I started to write down more notes regarding where items would be and what features to use (i.e. show/hide/local play/a dumb ai).
 
-## Installation
+-During the initial day of project work I began working on the base HTML and js for the project, completing the layout and the game logic. I thought going with a class asignment method would be best as it allowed me to easily alter the scss on the inputs in the field.
 
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Replace all instances of `ga-wdi-boston.browser-template` with the name of your project.
-1.  Move into the new project and `git init`
-1.  Add all of the files in your project with the command `git add -A`
-  -   *Note:* THIS IS THE ONLY TIME YOU SHOULD RUN THIS COMMAND
-1.  Commit all of your files with the command `git commit`
-  -   Your commit title should read `Initial commit`
-1.  Install dependencies with `npm install`.
+-During the second day of development I began working on some errors/bugs that were evident on the local host. I used a step-by-step method for testing where things were breaking or faultering by console logging various data forms or having a console log notify me if the intial page/event load reached a certain function. After about a half day of bug testing/fixing I moved onto styling.
 
-## Structure
+-During the latter half of the second work day and the third day I finished up the styling on the page and tested the interactions between buttons. It was at this time I started to deviate greatly from my initial wireframe to go towards a tron-esque theme.
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+-On the fourth day of development, I tested for more bugs/issues and finished some minor portions of styling.
 
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
+-On the fifth day I finalized the project based on the base requirements and then proceeded to work on a dumb AI that was finalized the final night of development.
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
+Unsolved Problems
+The one problem that I have not been able to address to my liking is the sizing of the page when the width of the client shrinks. The text will burst out of the containers holding them and on the game page the results header will jump down into the board area.
 
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
+Wireframe:
 
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Tasks
-
-Developers should run these often!
-
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt make-standard`: reformats all your code in the JavaScript Standard Style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-
-## [License](LICENSE)
-
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+User Stories:
