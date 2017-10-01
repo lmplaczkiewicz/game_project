@@ -13,8 +13,9 @@ const overlayOn = function on () {
 const signUpSuccess = function (data) {
   console.log('this is singUp data', data)
   $('#signUpModal').modal('hide')
-  $('#overlayAlert').text('USER PROFILE CREATED - ACCESS PROFILE BELOW')
   $('#signUpModalLabel').text('PROFILE CREATION')
+  $('#signUpModalLabel').css('color', 'black')
+  $('#overlayAlert').text('USER PROFILE CREATED - ACCESS PROFILE BELOW')
 }
 
 const signUpFailure = function (error) {
@@ -29,6 +30,9 @@ const signInSuccess = function (data) {
   $('#start-game').show()
   $('#signInModal').modal('hide')
   $('#activeSymbolId').empty()
+  $('#signInModalLabel').text('ACCESS PROFILE')
+  $('#signInModalLabel').css('color', 'black')
+  $('#result').text('WELCOME TO THE GAME GRID')
   store.user = data.user
   overlayOff()
 
@@ -59,6 +63,8 @@ const changePasswordSuccess = function (data) {
   console.log('Success')
   $('#changePasswordModal').modal('hide')
   $('#result').text('PASSWORD CHANGE SUCCESS')
+  $('#exampleModalLabel').text('CHANGE PASSWORD')
+  $('#exampleModalLabel').css('color', 'black')
 }
 
 const changePasswordFailure = function (error) {
