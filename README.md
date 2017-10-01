@@ -25,5 +25,6 @@ Unsolved Problems
 The one problem that I have not been able to address to my liking is the sizing of the page when the width of the client shrinks. The text will burst out of the containers holding them and on the game page the results header will jump down into the board area.
 
 Wireframe:
-
+https://github.com/lmplaczkiewicz/game_project/blob/master/wireframe.jpg
 User Stories:
+https://github.com/lmplaczkiewicz/game_project/blob/master/user-stories
