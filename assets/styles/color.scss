@@ -8,3 +8,19 @@ $white: #fff;
 @function shade($color, $percentage) {
   @return mix(#000, $color, $percentage);
 }
+$light-blue: rgba(21, 171, 195, 1);
+$light-blue-shadow: 0 0 5px rgba(21, 171, 195, .7);
+$black: #000;
+$bright-blue: rgba(36, 198, 224, 1);
+$bright-blue-shadow: 0 0 10px rgba(36, 198, 224, 1);
+$bright-blue-border: 1px solid rgba(36, 198, 224, 1);
+$white-border: 1px solid #fff;
+$bright-green-border: 1px solid rgba(36, 198, 24, 1);
+$bright-green-shadow: 0 3px 9px rgba(36, 198, 24, 1);
+$blue-haze: rgba(36, 198, 224, .7);
+$red: rgba(255, 0, 0, 1);
+$mute-blue: rgba(21, 171, 195, 1);
+$mute-blue-border: 1px solid rgba(21, 171, 195, 1);
+$mute-blue-shadow: 1px solid rgba(21, 171, 195, 1);
+$mute-blue-box-shadow: 0 0 10px rgba(21, 171, 195, .5);
+$fade-background: rgba(0, 0, 0, .7);
