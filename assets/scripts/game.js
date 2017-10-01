@@ -2,10 +2,9 @@
 
 const api = require('./api')
 const ui = require('./ui')
-const store = require('./store')
 
 let player = 0
-let board = ['', '', '', '', '', '', '', '', '']
+const board = ['', '', '', '', '', '', '', '', '']
 let emptySquares = 9
 let over = false
 
@@ -15,10 +14,6 @@ const createBoard = function (id) {
   } else {
     board[id] = 'O'
   }
-}
-
-const resultAdmin = function (player) {
-  $('#result').text('PLAYER ' + player + ' HAS WON')
 }
 
 const pOneSymbol = function () {
@@ -114,7 +109,7 @@ const cellInput = function (squareSelected) {
 
 const checkSquare = function (squareSelected) {
   if (squareSelected.hasClass('pOne') || squareSelected.hasClass('pTwo')) {
-    console.log('Invalid Space')
+    $('#result').text('INVALID MOVE')
   } else {
     cellInput(squareSelected)
   }
@@ -122,17 +117,13 @@ const checkSquare = function (squareSelected) {
 
 const addHandlers = function () {
   $('.col-xs-4').on('click', function (event) {
-    console.log(board)
-    let squareSelected = $(this)
+    const squareSelected = $(this)
     createBoard(this.id)
     checkSquare(squareSelected)
-    let gameId = store.game.id
-    let cellIndex = this.id
-    let cellValue = board[this.id]
-    let gameOver = over
-    console.log('idx:', cellIndex)
-    console.log('cellValue:', cellValue)
-    let data = {'game': {
+    const cellIndex = this.id
+    const cellValue = board[this.id]
+    const gameOver = over
+    const data = {'game': {
       'cell': {
         'index': cellIndex,
         'value': cellValue

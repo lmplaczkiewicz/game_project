@@ -2,7 +2,6 @@
 
 const store = require('./store')
 const config = require('./config')
-const game = require('./game')
 
 const signUp = function (data) {
   return $.ajax({
@@ -13,7 +12,6 @@ const signUp = function (data) {
 }
 
 const signIn = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
@@ -32,7 +30,6 @@ const signOut = function () {
 }
 
 const passwordChange = function (data) {
-  console.log(store.user)
   return $.ajax({
     url: config.apiOrigin + '/change-password/' + store.user.id,
     method: 'PATCH',
@@ -44,7 +41,6 @@ const passwordChange = function (data) {
 }
 
 const postGame = function () {
-  console.log('inside postGame')
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'POST',
@@ -55,7 +51,6 @@ const postGame = function () {
 }
 
 const updateGame = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',

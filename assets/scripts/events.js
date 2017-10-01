@@ -35,6 +35,7 @@ const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
     .then(game.onReplay)
+    .then($('#result').text('WELCOME TO THE GAME GRID'))
     .catch(ui.signOutFailure)
 }
 
@@ -47,7 +48,6 @@ const onPasswordChange = function (event) {
 }
 
 const onGameStart = function (event) {
-  console.log('Made it to onGameStart in events')
   event.preventDefault()
   $('.col-xs-4').unbind('click')
   game.addHandlers()
@@ -61,7 +61,6 @@ const onGameStart = function (event) {
 }
 
 const onReplayStart = function (event) {
-  console.log('Made it to onReplayStart in events')
   game.onReplay(event)
   getStats()
   event.preventDefault()
