@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>tic-tac-toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+        <body class="container-fluid">
+          <div class='underLay'>
+
+        <div class='overlay' id='overlayId'>
+          <header class="mainPageHeader">
+            <h1 class='titleHead'>TIC TAC TOE</h1>
+          </header>
+
+
+        <div class="container buttonBox">
+
+          <div class="container overlayText">
+            <h1 class="overlayHead" id="overlayAlert">GREETINGS USER</h1>
+          </div>
+
+        <div class='container signBox'>
+            <button type="button" class="btn-danger overlaySignButton" data-toggle="modal" data-target="#signUpModal">
+              CREATE PROFILE
+            </button>
+        </div>
+
+          <div class='container signBox'>
+              <button type="button" class="btn-danger overlaySignInButton" data-toggle="modal" data-target="#signInModal">
+                ACCESS PROFILE
+              </button>
+          </div>
+        </div>
+        <a class='gitLink' href="https://github.com/lmplaczkiewicz/game_project" target="_blank">@lmplaczkiewicz</a>
+      </div>
+
+          <nav class="col-md-12 col-xs-12">
+            <!-- Button trigger modal -->
+
+      <form class='signOut' id="sign-out">
+      <div class="button">
+        <button type="submit" class="topRowButton btn-danger" data-toggle="" data-target="">
+          SIGN OUT
+        </button>
+      </div>
+      </form>
+
+      <div class="button" id="changePasswordAccessButton">
+      <button type="button" class="topRowButton btn-danger" data-toggle="modal" data-target="#changePasswordModal">
+        CHANGE PASSWORD
+      </button>
+      </div>
+
+      <!-- Modal -->
+      <form class="credentialEntry" id="change-password">
+      <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="exampleModalLabel">CHANGE PASSWORD</h3>
+            </div>
+            <div class="modal-body">
+              <h3 class="modalAccountHeader">Old Password</h3>
+              <input class='fillbox' type="password" name="passwords[old]" id="passwordOld" placeholder="Enter Old Password">
+              <h3 class="modalAccountHeader">New Password</h3>
+              <input class='fillbox' type="password" name="passwords[new]" id="passwordNew" placeholder="Enter New Password">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn-danger modalConfirmButton" id="changePasswordButton">Change Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+
+      <div id='playGameId'>
+        <form class='startButton' id="start-game">
+        <div class="button">
+          <button type="submit" class="topRowButton btn-danger startGameButton" data-toggle="" data-target="">
+            LOCAL GAME
+          </button>
+        </div>
+        </form>
+      </div>
+
+      <div id='replayGame'>
+        <form class='replayButton' id="replay-game">
+        <div class="button">
+          <button type="submit" class="topRowButton btn-danger replayGameButton" data-toggle="" data-target="">
+            REPLAY LOCAL
+          </button>
+        </div>
+        </form>
+      </div>
+
+      <div class="button" id="ai-game">
+        <button type="button" class="topRowButton btn-danger aiGameButton" data-toggle="" data-target="">
+          AI GAME
+        </button>
+      </div>
+
+      <div id='replayAiGame'>
+        <form class='replayButton' id="replay-ai-game">
+        <div class="button">
+          <button type="submit" class="topRowButton btn-danger replayAiGameButton" data-toggle="" data-target="">
+            REPLAY AI
+          </button>
+        </div>
+        </form>
+      </div>
+
+          </nav>
+
+          <!-- Modal -->
+          <form class="credentialEntry" id="sign-up">
+          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="signUpModalLabel">PROFILE CREATION</h3>
+                </div>
+                <div class="modal-body">
+                  <h3 class="modalAccountHeader">Email</h3>
+                  <input class='fillbox' type="text" name="credentials[email]" id="email" placeholder="Enter Email">
+                  <h3 class="modalAccountHeader">Password</h3>
+                  <input class='fillbox' type="password" name="credentials[password]" id="password" placeholder="Enter Password">
+                  <h3 class="modalAccountHeader">Confirm Password</h3>
+                  <input class='fillbox' type="password" name="credentials[password_confirmation]" id="passwordConfirm" placeholder="Confirm Password">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn-danger modalConfirmButton" id="signUpButton">Create Account</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </form>
+
+          <!-- Modal -->
+          <form class="credentialEntry" id="sign-in">
+          <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="signInModalLabel">ACCESS PROFILE</h3>
+                </div>
+                <div class="modal-body">
+                  <h3 class="modalAccountHeader">Email</h3>
+                  <input class='fillbox' type="text" name="credentials[email]" id="emailSignIn" placeholder="Enter Email">
+                  <h3 class="modalAccountHeader">Password</h3>
+                  <input class='fillbox' type="password" name="credentials[password]" id="passwordSignIn" placeholder="Enter Password">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn-danger modalCloseButton" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn-danger modalConfirmButton" id="signInButton">Access Profile</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </form>
+
+
+          <aside class='accountInfo' id='accountInfoId'>
+            <div class='col-xs-2 asideBox' id='activeTurn'>
+              <h3 class='activeTurnTitle' id='activeTurnId'>
+                PLAYER TURN
+              </h3>
+              <h2 class='activeTurnSymbol' id='activeSymbolId'>
+
+              </h2>
+            </div>
+
+            <div class='col-xs-2 asideBox' id='gameComplete'>
+              <h3 class='gamesCompleteTitle'>
+                GAMES COMPLETED
+              </h3>
+              <h2 class='gamesCompleteInput' id='gamesCompleteId'>
+
+              </h2>
+            </div>
+          </aside>
+
+          <main>
+          <div class='statusMessage' id='statusMessageId'>
+            <h1 class="result" id="result">WELCOME TO THE GAME GRID</h1>
+          </div>
+          <form class="container theGameBox" id="container">
+
+            <div class="row">
+              <div class="col-xs-4 topRow" id="0"></div>
+              <div class="col-xs-4 topRow" id="1"></div>
+              <div class="col-xs-4 topRow" id="2"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4" id="3"></div>
+              <div class="col-xs-4" id="4"></div>
+              <div class="col-xs-4" id="5"></div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-4" id="6"> </div>
+              <div class="col-xs-4" id="7"></div>
+              <div class="col-xs-4" id="8"></div>
+            </div>
+          </form>
+        </main>
+
+      </div>
+
+        </body>
+      </html>
