@@ -1,5 +1,7 @@
 'use strict'
 
+// clear form fields and reset overlay header on sign in.
+
 const store = require('./store')
 
 const overlayOff = function off () {
@@ -12,11 +14,13 @@ const overlayOn = function on () {
 
 const signUpSuccess = function (data) {
   $('#signUpModal').modal('hide')
+  $('#sign-up')[0].reset()
   $('#signUpModalLabel').text('PROFILE CREATION')
   $('#signUpModalLabel').css('color', 'black')
   $('#overlayAlert').text('USER PROFILE CREATED - ACCESS PROFILE BELOW')
   $('#signInModalLabel').text('ACCESS PROFILE')
   $('#signInModalLabel').css('color', 'black')
+  $('#gamesCompleteId').text('')
 }
 
 const signUpFailure = function () {
@@ -24,16 +28,19 @@ const signUpFailure = function () {
   $('#signUpModalLabel').text('CREATION FAILED')
   $('#signInModalLabel').text('ACCESS PROFILE')
   $('#signInModalLabel').css('color', 'black')
+  $('#sign-up')[0].reset()
 }
 
 const signInSuccess = function (data) {
   $('.col-xs-4').off()
   $('#start-game').show()
   $('#signInModal').modal('hide')
+  $('#sign-in')[0].reset()
   $('#activeSymbolId').empty()
   $('#signInModalLabel').text('ACCESS PROFILE')
   $('#signInModalLabel').css('color', 'black')
   $('#result').text('WELCOME TO THE GAME GRID')
+  $('#overlayAlert').text('GREETINGS USER')
   store.user = data.user
   overlayOff()
 }
@@ -41,6 +48,7 @@ const signInSuccess = function (data) {
 const signInFailure = function () {
   $('#signInModalLabel').css('color', 'red')
   $('#signInModalLabel').text('ACCESS FAILED')
+  $('#sign-in')[0].reset()
 }
 
 const signOutSuccess = function () {
@@ -55,11 +63,12 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
-  $('#result').text('SIGN OUT FAILURE - YOU WILL NEVER LEAVE')
+  $('#result').text('SIGN OUT FAILURE')
 }
 
 const changePasswordSuccess = function (data) {
   $('#changePasswordModal').modal('hide')
+  $('#change-password')[0].reset()
   $('#result').text('PASSWORD CHANGE SUCCESS')
   $('#exampleModalLabel').text('CHANGE PASSWORD')
   $('#exampleModalLabel').css('color', 'black')
@@ -67,6 +76,7 @@ const changePasswordSuccess = function (data) {
 
 const changePasswordFailure = function () {
   $('#result').text('PASSWORD CHANGE FAILURE')
+  $('#change-password')[0].reset()
   $('#exampleModalLabel').css('color', 'red')
   $('#exampleModalLabel').text('CHANGE FAILURE')
 }
@@ -76,12 +86,14 @@ const postGameSuccess = function (data) {
 }
 
 const postGameFailure = function () {
+  $('#result').text('Server connection issues')
 }
 
-const patchGameSuccess = function (data) {
+const patchGameSuccess = function () {
 }
 
 const patchGameFailure = function () {
+  $('#result').text('Server connection issues')
 }
 
 const statsSuccess = function (data) {
@@ -92,11 +104,14 @@ const statsSuccess = function (data) {
     }
   }
   $('#gamesCompleteId').text(count)
+  if (count >= 100) {
+    $('#gamesCompleteId').css('font-size', '72px')
+  }
   count = 0
 }
 
 const statsFailure = function () {
-  $('#gamesCompleteId').text('ERROR')
+  $('#gamesCompleteId').text('Error')
 }
 
 module.exports = {

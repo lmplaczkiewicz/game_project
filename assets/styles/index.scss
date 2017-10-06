@@ -388,6 +388,7 @@ aside {
   text-align: center;
   text-shadow: $bright-green-shadow;
   width: 100%;
+  overflow: scroll;
 }
 
 .gamesCompleteTitle {
@@ -417,7 +418,8 @@ aside {
   margin: 0 auto;
   text-align: center;
   text-shadow: $bright-green-shadow;
-  width: 100%;
+  max-width: 100%;
+  overflow: scroll;
 }
 
 .box {
